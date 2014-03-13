@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "Rebloguard",
+    "description": "Protects you from malicious JavaScript while browsing and reblogging in Tumblr",
+    "version": "0.1",
+    "permissions": ["http://*.tumblr.com/*",
+                    "https://*.tumblr.com/*",
+                    "tabs",
+                    "webRequest",
+                    "webRequestBlocking",
+                    "contentSettings",
+                    "notifications"],
+    "browser_action": {
+        "default_icon": "images/icon.png",
+        "default_popup": "html/popup.html"
+    }
+}
+
