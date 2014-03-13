@@ -18,6 +18,14 @@
 
     "background": {
         "scripts": ["js/init.js"]
-    }
+    },
+
+    "content_scripts": [{
+        "matches": ["http://*.tumblr.com/*",
+                    "https://*.tumblr.com/*"],
+        "css": ["css/page.css"],
+        "js": ["js/jquery-2.1.0.js", "js/page.js"],
+        "run_at": "document_start"
+    }]
 }
 

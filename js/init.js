@@ -1,3 +1,5 @@
+// Initialize Rebloguard, make sure Chrome blocks all Tumblr JS by default
+// (we'll reactivate the scripts we actually want later)
 window.addEventListener("load", function(){
     console.log("Initializing");
     if (!window.hasOwnProperty('rebloguard')) {
@@ -26,4 +28,6 @@ window.addEventListener("load", function(){
     for (var i = 0; i < content_settings.length; ++i) {
         content_settings[i]();
     }
+
+    rebloguard.jQuery = jQuery;
 }, true);
