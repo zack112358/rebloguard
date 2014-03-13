@@ -17,7 +17,7 @@
 
 var rebloguard_execute_contained_script_safely = function(text) {
     return eval(text);
-}
+};
 
 (function() {
 
@@ -92,7 +92,7 @@ var rebloguard_execute_contained_script_safely = function(text) {
         });
 
         return runnable_elements;
-    }
+    };
 
     // Run the scripts in an element
     var run = function(element) {
@@ -104,7 +104,7 @@ var rebloguard_execute_contained_script_safely = function(text) {
         } else {
             restore_events(element);
         }
-    }
+    };
 
     var script_queue = [];
     var next_script_index = 0;
@@ -134,7 +134,7 @@ var rebloguard_execute_contained_script_safely = function(text) {
         else {
             run_script_queue();
         }
-    }
+    };
 
     // See if there is any work to be done on the script queue; if so, do it
     var run_script_queue = function() {
@@ -144,7 +144,15 @@ var rebloguard_execute_contained_script_safely = function(text) {
             rebloguard_execute_contained_script_safely(script_queue[next_script_index].textContent);
             next_script_index += 1;
         }
-    }
+    };
+
+    var restore_events = function(element) {
+        // FIXME do this --- but maybe Tumblr doesn't really do onclick etc.?
+    };
+
+    var is_allowed = function(element) {
+        // ???
+    };
 
     setTimeout(sweep, sweep_interval);
 })();
