@@ -10,9 +10,14 @@
                     "webRequestBlocking",
                     "contentSettings",
                     "notifications"],
+
     "browser_action": {
         "default_icon": "images/icon.png",
         "default_popup": "html/popup.html"
+    },
+
+    "background": {
+        "scripts": ["js/init.js"]
     }
 }
 
