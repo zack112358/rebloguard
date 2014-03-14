@@ -215,6 +215,7 @@ var rebloguard_execute_contained_script_safely = function(text) {
             runnable_elements = runnable_elements.concat(document.querySelectorAll(runnable_selectors[i]));
         }
         
+        console.log(runnable_elements);
         return runnable_elements;
     };
 

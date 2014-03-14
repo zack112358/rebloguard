@@ -28,6 +28,4 @@ window.addEventListener("load", function(){
     for (var i = 0; i < content_settings.length; ++i) {
         content_settings[i]();
     }
-
-    rebloguard.jQuery = jQuery;
 }, true);
